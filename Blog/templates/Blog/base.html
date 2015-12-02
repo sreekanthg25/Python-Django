@@ -49,6 +49,25 @@
 						{% endblock %}
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-10">
+						<div class="readnext-section">
+							<div class="readnext-title">
+								What to Read Next
+							</div>
+							<div class="readnext-body">
+							{% for rpost in randpost%}
+								<div class="col-xs-3">
+									<a href="{% url 'post_detail' pk=rpost.pk %}" class="thumbnail">
+										<img src="{{MEDIA_URL}}{{rpost.heroimage}}" class="img-responsive">
+										<p>{{rpost.title}}</p>
+									</a>
+								</div>
+							{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
