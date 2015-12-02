@@ -3,7 +3,6 @@
 <html>
 <head>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
@@ -11,13 +10,35 @@
 	<main class="page-content">
 		<div class="page-sidebar sidebar">
 			<div class="logo-box">
-				<a href="/" class="logo-text"><span>My Blog</span></a>
+				<a href="/" class="logo-text">
+					<span>My Blog</span>
+				</a>
 			</div>
 			<ul class="menu">
-				<li><a>Home</a></li>
-				<li><a>Home</a></li>
-				<li><a>Home</a></li>
-				<li><a>Home</a></li>
+				<li class="active">
+					<a>
+						<img src="{{MEDIA_URL}}icon/home.png" class="menu_img">
+						<p>Home</p>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="{{MEDIA_URL}}icon/search.png" class="menu_img">
+						<p>Search</p>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="{{MEDIA_URL}}icon/user_manage.png" class="menu_img">
+						<p>Users</p>
+					</a>
+				</li>
+				<li>
+					<a>
+						<img src="{{MEDIA_URL}}icon/message.png" class="menu_img">
+						<p>Contact</p>
+					</a>
+				</li>
 			</ul>
 		</div>
 		<div class="page-inner">

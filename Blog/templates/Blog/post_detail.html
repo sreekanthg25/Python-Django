@@ -8,8 +8,17 @@
                 {{ post.published_date | date:"l, F dS, Y"}} | <span class="author">{{post.author}}</span>
             </div>
         {% endif %}
-        <p>{{ post.text|linebreaks }}</p>
-        <p>{{post.body}}</p>
+        <div class="img_preview">
+	        <img src="{{MEDIA_URL}}{{post.heroimage}}" class="img-responsive">
+	    </div>
+	    <div class="col-md-7">
+        	<p>{{post.body}}</p>
+        </div>
+        <div class="col-md-4">
+        	<div class="opt_img">
+	        	<img src="{{MEDIA_URL}}{{post.optionalimage}}" class="img-responsive">
+	    	</div>
+        </div>
         <p>{{ post.text|linebreaks }}</p>
     </div>
 {% endblock %}
