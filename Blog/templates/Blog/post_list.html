@@ -1,12 +1,11 @@
-<div>
-    <h1><a href="/">Top 10 List</a></h1>
-</div>
-
+{% extends 'Blog/base.html' %}
+{% block content %}
 {% for post in posts %}
-    <div>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{post.body|slice:"0:500"}}...</p>
-        <p><a>Read More..</a></p>
-        <p>{{ post.text|linebreaks }}</p>
-    </div>
+    	<div class="post">
+        	<h2>{{ post.title }}</h2>
+        	<p>{{post.body|slice:"0:500"}}...</p>
+        	<p><a href="{% url 'post_detail' pk=post.pk %}">Read More..</a></p>
+        	<p>{{ post.text|linebreaks }}</p>
+    	</div>
 {% endfor %}
+{% endblock %}
