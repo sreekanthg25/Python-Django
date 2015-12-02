@@ -1,11 +1,31 @@
 {% extends 'Blog/base.html' %}
 {% block content %}
-{% for post in posts %}
-    	<div class="post">
-        	<h2>{{ post.title }}</h2>
-        	<p>{{post.body|slice:"0:500"}}...</p>
-        	<p><a href="{% url 'post_detail' pk=post.pk %}">Read More..</a></p>
-        	<p>{{ post.text|linebreaks }}</p>
-    	</div>
+	<div class="page-title">
+		<h2>Top 10 List</h2>
+	</div>
+	<div class="random_preview">
+		{% if rp.published_date %}
+	        <div class="date">
+	            {{ rp.published_date | date:"l, F dS, Y"}} | <span class="author">{{rp.author}}</span>
+	        </div>
+	        <div class="img_preview">
+	        	<img src="{{MEDIA_URL}}{{rp.heroimage}}" class="img-responsive">
+	        </div>
+	        <div class="desc_preview">
+	        	<p>{{rp.body|slice:"0:600"}}...</p>
+	        </div>
+	    {% endif %}
+    </div>
+    <ol>
+	{% for post in posts %}
+		<li>
+		<div class="post">
+	    	<h2>{{ post.title }}</h2>
+	    	<p>{{post.body|slice:"0:500"}}...</p>
+	    	<p><a href="{% url 'post_detail' pk=post.pk %}">Read More..</a></p>
+	    	<p>{{ post.text|linebreaks }}</p>
+		</div>
+		</li>
 {% endfor %}
+	</ol>
 {% endblock %}
