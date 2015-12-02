@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+	<main class="page-content">
+		<div class="page-sidebar sidebar">
+			<div class="logo-box">
+				<a href="/" class="logo-text"><span>My Blog</span></a>
+			</div>
+			<ul class="menu">
+				<li><a>Home</a></li>
+				<li><a>Home</a></li>
+				<li><a>Home</a></li>
+				<li><a>Home</a></li>
+			</ul>
+		</div>
+		<div class="page-inner">
+			<div id="main-wrapper">
+				<div class="row">
+					<div class="col-md-10">
+						{% block content %}
+						{% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

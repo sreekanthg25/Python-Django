@@ -1,0 +1,90 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+#wrapper {
+  padding-left: 250px;
+}
+
+
+.save {
+    float: right;
+}
+.date{
+	font-size: 10px;
+	color: #828282;
+}
+.author{
+	color: #4D91E5;
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 30px;
+}
+.post p{
+	color: #828282;
+	font-size: 12px;
+}
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+main{
+	position: relative;
+	overflow-x: hidden;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+	box-shadow: 0 0 30px #241d20;
+}
+.page-content{
+	-webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+	-moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+	background: #f7f8f8;
+	min-height: 100%;
+}
+.page-inner {
+    padding: 60px 0 50px 160px;
+    background: #F1F4F9;
+  	position: relative;
+}
+#main-wrapper {
+  margin: 30px;
+  padding: 0;
+}
+.sidebar {
+  background: #34425A;
+}
+.page-sidebar {
+	position: fixed;
+	width: 160px;
+	display: block;
+	z-index: 998;
+	float: left;
+	height: auto!important;
+	overflow: visible!important;
+}
+.logo-box {
+	background: #22baa0;
+	height: 60px;
+}
+.logo-box a {
+  color: #fff;
+  margin: 0 auto;
+}
+.logo-box .logo-text{
+	font-size: 20px;
+	line-height: 60px;
+	padding: 0 15px;
+	text-align: center;
+	vertical-align: middle;
+}
