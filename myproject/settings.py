@@ -102,7 +102,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-MEDIA_ROOT = '/home/sreekanth/Djangoworkspace/python-django/myproject/Blog/media/'
+MEDIA_ROOT = './Blog/media/'
 
 MEDIA_URL = '/media/'
 # Static files (CSS, JavaScript, Images)
