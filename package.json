@@ -1,0 +1,34 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "Blog Exercise",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install && grunt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreekanthg25/Python-Django.git"
+  },
+  "author": "Sreekanth G",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sreekanthg25/Python-Django/issues"
+  },
+  "homepage": "https://github.com/sreekanthg25/Python-Django#readme",
+  "dependencies": {
+    "bower": "^1.7.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-html2js": "^0.3.5",
+    "grunt-ng-annotate": "^1.0.1"
+  }
+}

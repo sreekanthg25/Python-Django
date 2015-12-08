@@ -1,4 +1,6 @@
 env
 *.DS_Store
 *.pyc
+**/bower_components
+**/node_modules
 __pycache__

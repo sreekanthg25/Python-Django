@@ -126,23 +126,48 @@ main{
 .random_preview{
 	padding: 0 20px;
 }
-.img_preview{
-	position: relative;
-	height:350px;
-	display: block;
-	margin-bottom: 15px;
-}
+
 .img_preview img{
-	width: auto;
-	height: 100%;
+	max-width: 100%;
+	display: block;
+	margin: 0 0 1em;
 }
 
-.post_list ol {
-	margin-left: 100px;
+	
+.post_list > ol {
+    list-style-type: none;
+    list-style-position:inside;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+     
+    margin: 0;
+    margin-left: 4em;
+    padding-top: 40px;
+     
+    counter-reset: li-counter;
 }
+.post_list > ol > li{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 2em;
+    min-height: 3em;
+}
+.post_list > ol > li:before {
+    position: absolute;
+    
+    left: -1.5em;
+    width: 1.2em;
+    height: 1.2em;
 
-.post_list ol li {
-	font-size: 4em; 
+    font-size: 2.5em;
+    line-height: 0.9;
+    text-align: center;
+    color: #f5f5f5;
+ 
+    border: 3px solid #2B384E;
+    border-radius: 50%;
+    background-color: #22BAA0;
+    content: counter(li-counter);
+    counter-increment: li-counter;
 }
 .readnext-section{
 

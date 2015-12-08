@@ -1,0 +1,24 @@
+{
+  "name": "myproject",
+  "homepage": "https://github.com/sreekanthg25/Python-Django",
+  "authors": [
+    "sreekanthg25 <seeku.sreekanth@gmail.com>"
+  ],
+  "description": "Top 10 List of Articles",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "myproject/static/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15"
+  }
+}

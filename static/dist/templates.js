@@ -1,0 +1,2 @@
+angular.module('feedBuilder.templates', []);
+
