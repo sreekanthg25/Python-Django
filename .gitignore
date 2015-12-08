@@ -2,6 +2,7 @@ env
 *.DS_Store
 *.pyc
 templates/*.html
+static/dist
 **/bower_components
 **/node_modules
 __pycache__
