@@ -181,7 +181,7 @@ module.exports = function ( grunt ){
 		   */
 		  appjs: {
 		    src: [
-		      '<%= build_dir %>/src/**/*.js'
+		      '<%= build_dir %>/static/src/**/*.js'
 		    ],
 		    dest: '<%= build_dir %>/src.js'
 		  },
@@ -322,10 +322,10 @@ module.exports = function ( grunt ){
         html2js: {
           main: {
             options: {
-              base: '<%= build_dir %>/src',
-              module: 'feedBuilder.templates'
+              base: '<%= build_dir %>/static/src',
+              module: 'blogs.templates'
             },
-            src: [ '<%= build_dir %>/src/**/*.html' ],
+            src: [ '<%= build_dir %>/static/src/**/*.html' ],
             dest: '<%= build_dir %>/templates.js'
           }
         },

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 doctype html
 html(ng-app="blog", lang="en")
     head
@@ -5,8 +6,8 @@ html(ng-app="blog", lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=Edge")
         meta(name="viewport", content="width=device-width, initial-scale=1")
-        meta(name="description", content="TIG Central")
-        link(rel="stylesheet", type="text/css", href="{{ STATIC_URL }}dist/assets/#{pkg.name}.css")
+        meta(name="description", content="Articles Blog")
+        link(rel="stylesheet", type="text/css", href="{% static 'dist/assets/#{pkg.name}.css' %}")
   body.home
     div#wrapper(ui-view="blogapp")
-    script(src="{{ STATIC_URL }}dist/assets/#{pkg.name}.js", charset="utf-8")
+    script(src="{% static 'dist/assets/#{pkg.name}.js' %}", charset="utf-8")
