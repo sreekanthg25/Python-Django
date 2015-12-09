@@ -1,0 +1,19 @@
+.nav.sidenav(ng-include="'app/commonview/sidebar.html'")
+.page-inner
+	#main-wrapper
+		.row
+			.col-md-10
+				.post
+					h2 {{post.title}}
+					.date {{post.published_date | date:'EEEE, MMMM d, y'}} | 
+						span.author {{post.author}}
+					.img_preview
+						img.img-responsive(src="{{post.heroimage}}")
+					.desc_preview
+						.col-md-7
+							p {{post.body}}
+						.col-md-4
+							.opt_img
+								img.img-responsive(src="{{post.optionalimage}}")
+		what-next(list="posts")
+					

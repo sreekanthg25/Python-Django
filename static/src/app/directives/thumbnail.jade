@@ -1,0 +1,10 @@
+.row
+	.col-md-10
+		.articlethumb
+			.readnext-title What to Read Next
+			.readnext-body
+				ul
+					li.col-xs-3(ng-repeat='post in list | orderBy : "rank" | limitTo : 4')
+						a(ui-sref="details({id:post.id})")
+							img.img-responsive.thumbnail(ng-src='{{post.heroimage}}')
+							p {{post.title | ellipsis : 50}}
