@@ -1,0 +1,14 @@
+.nav.sidenav(ng-include="'app/commonview/sidebar.html'")
+.page-inner
+	#main-wrapper
+		.row
+			.col-md-10
+				.page-title
+					h2 Top 10 List
+				.random_preview
+					.date {{randomPost.published_date}} |
+						span.author {{randomPost.author}}
+					.img_preview
+						img.img-responsive(src="{{randomPost.heroimage}}")
+					.desc_preview
+						p {{randomPost.body}}

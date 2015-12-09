@@ -1,0 +1,65 @@
+.logo-box {
+    border:0;
+    cursor: pointer;
+    position: relative;
+    background: #22baa0;
+    height: 60px;
+    overflow: hidden;
+    width: 100%;
+    display: table;
+    a {
+        color: #fff;
+        margin: 0 auto;
+    }
+    .logo-text {
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 60px;
+        padding: 0 15px;
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+    }
+}
+.sidenav {
+    background: #34425A;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    width: 160px;
+    display: block;
+    z-index: 998;
+    float: left;
+    height: auto!important;
+    overflow: visible!important;
+    .menu {
+        padding: 0;
+        margin: 0;
+        width: 160px;
+        color: #fff;
+        position: relative;
+        display: block;
+    }
+}
+
+.menu {
+    li {
+        list-style: none;
+    }
+    & > li {
+        & > a {
+            text-align: center;
+        }
+    }
+    a {
+        display: block;
+        padding: 15px 18px;
+        background: 0 0;
+        text-decoration: none;
+        font-size: 13px;
+    }
+}
+.menu &>li.active &>a, .menu &>li &>a:hover {
+    background: #2b384e;
+    color: #fff;
+}
