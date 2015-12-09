@@ -27,7 +27,9 @@ body {
 *{
   font-family: 'Open Sans', sans-serif;
 }
-
+:active, :focus, :hover {
+  outline: 0!important;
+}
 ::-webkit-scrollbar {
   width: 5px;
   height: 6px;
@@ -41,4 +43,57 @@ body {
 ::-webkit-scrollbar-track {
   margin: 2px;
   border-radius: 2px;
+}
+
+#wrapper {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+  -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+  background: #f7f8f8;
+  min-height: 100%;
+
+}
+
+main {
+  position: relative;
+  overflow-x: hidden;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+  box-shadow: 0 0 30px #241d20;
+}
+.date {
+  font-size: 10px;
+  color: #828282;
+  padding:10px 0px 9px 0px;
+}
+.author {
+  color: #4D91E5;
+}
+.post {
+  margin-bottom: 30px;
+}
+.post p, .desc_preview {
+  color: #828282;
+  font-size: 12px;
+}
+.page-inner {
+    padding: 0 0 50px 160px;
+    background: #F1F4F9;
+    position: relative;
+}
+#main-wrapper {
+    margin: 0 30px;
+    padding: 0;
+}
+.page-title {
+    padding: 20px;
+    border-bottom: 1px solid #dee2e8;
+    h2 {
+        font-size: 30px;
+        font-weight: 400;
+        color: #52639F;
+        padding: 0;
+        margin: 0 0 4px;
+    }
 }

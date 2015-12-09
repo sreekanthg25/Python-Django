@@ -53,8 +53,8 @@ module.exports = function ( grunt ){
  		 */
  		vendor_files:{
  			js:[
- 				'bower_components/angular/angular.js',
- 				'bower_components/angular-ui-router/release/angular-ui-router.js'
+ 				'static/bower_components/angular/angular.js',
+ 				'static/bower_components/angular-ui-router/release/angular-ui-router.js'
  			],
  			css:[
 
