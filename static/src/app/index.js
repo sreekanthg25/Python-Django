@@ -1,13 +1,15 @@
 angular.module('blog',[
 	'ui.router',
-	'blogs.postservice',
-	'blogs.templates'
+	'blog.filters',
+	'blog.postservice',
+	'blog.directives',
+	'blog.templates'
 ])
 .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.when('', '/');
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.when('', '/home');
+    $urlRouterProvider.otherwise('/home');
     $stateProvider.state('home', {
-        url: '/',
+        url: '/home',
         views:{
             "blogapp":{
                 controller:'listCtrl',
@@ -22,12 +24,15 @@ angular.module('blog',[
         }
     });
     $stateProvider.state('details', {
-        url: '/post/:id',
+        url: '/details/:id',
         views:{
             "blogapp":{
                 controller:'detailCtrl',
                 templateUrl: 'app/views/details.html',
                 resolve: {
+                	posts: function (PostService) {
+    	                return PostService.list();
+        	        },
 	                post: function ($stateParams,PostService) {
 	                	var postId = $stateParams.id;
     	                return PostService.get(postId);
@@ -48,5 +53,8 @@ angular.module('blog',[
    function getRandomObj(obj){
    		return obj[Math.floor(Math.random() * obj.length)];
    }
+})
+.controller('detailCtrl',function($scope,$state,$rootScope,post,posts){
+   $scope.post = post;
+   $scope.posts = posts;
 });
-

@@ -1,4 +1,4 @@
-angular.module('blogs.postservice',[])
+angular.module('blog.postservice',[])
 .factory('PostService', function ($http, $q) {
     var api_url = "/posts/";
     return {

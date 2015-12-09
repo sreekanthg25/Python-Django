@@ -6,9 +6,18 @@
 				.page-title
 					h2 Top 10 List
 				.random_preview
-					.date {{randomPost.published_date}} |
+					.date {{randomPost.published_date | date:'EEEE, MMMM d, y'}} | 
 						span.author {{randomPost.author}}
 					.img_preview
 						img.img-responsive(src="{{randomPost.heroimage}}")
 					.desc_preview
-						p {{randomPost.body}}
+						p {{randomPost.body | ellipsis : 600}}
+				.post_list
+					ol
+						li(ng-repeat="postlist in posts | limitTo : 10")
+							.post
+								h2 {{postlist.title}}
+								p {{postlist.body | ellipsis : 500}}
+								p
+									a(ui-sref="details({id:postlist.id})") Read More...
+		what-next(list="posts")

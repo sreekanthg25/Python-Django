@@ -323,7 +323,7 @@ module.exports = function ( grunt ){
           main: {
             options: {
               base: '<%= build_dir %>/static/src',
-              module: 'blogs.templates'
+              module: 'blog.templates'
             },
             src: [ '<%= build_dir %>/static/src/**/*.html' ],
             dest: '<%= build_dir %>/templates.js'
